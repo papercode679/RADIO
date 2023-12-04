@@ -63,7 +63,7 @@ Consistent with AntiBenford [2], transactions valued at less than 1 unit are exc
 
 The edge file requires pre-processing. The following steps need to be taken:
 
-- And pre-processing details are in /dataset/eth-2018jan/sum.py and /dataset/eth-2019jan/sum.py.
+- The pre-processing details are in /dataset/eth-2018jan/sum.py and /dataset/eth-2019jan/sum.py.
 
 ## How to run the code for RADIO
 
