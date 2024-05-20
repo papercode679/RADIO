@@ -48,7 +48,7 @@ Each of them contains a ground-truth subgraphs file `{name}-1.90.anomaly.txt` an
 
 ### Blur
 
-The Blur dataset is a transaction dataset from the NFT marketplace [55], which is compiled by Etherscan API[3] from Oct. 19, 2022 to Apr. 1, 2023. They contain NFT transactions among addresses.
+The Blur dataset is a transaction dataset from the NFT marketplace [4], which is compiled by Etherscan API [4] from Oct. 19, 2022 to Apr. 1, 2023. They contain NFT transactions among addresses.
 
 dataset/blur contains a file with abnormal subgraphs `{name}-1.90.anomaly.txt` and an edge file `{name}-1.90.ungraph.txt`.
 
@@ -81,6 +81,8 @@ Main arguments:
 
 [1]https://www.kaggle.com/bigquery/ethereum-blockchain
 
-[2]T. Chen and C. Tsourakakis, “Antibenford subgraphs: Unsupervised anomaly detection in financial networks,” (KDD2022)
+[2]T. Chen and C. Tsourakakis, "Antibenford subgraphs: Unsupervised anomaly detection in financial networks", (KDD2022)
 
-[3]https://etherscan.io/
+[3]Z.Chenyu, C.Hongzhou, W.Hao, Z.Junyu, and C Wei, "ARTEMIS: Detecting Airdrop Hunters in NFT Markets with a Graph Learning System", (WWW2024)
+
+[4]https://etherscan.io/
