@@ -36,8 +36,6 @@ Intel Xeon Platinum 8370C processor 32-core 2.8G CPU
 
 ## Datasets info
 
-### Ethereum Blockchain
-
 The ETH datasets are data from the Ethereum blockchain shared by Google BigQuery[1]. They contain token transactions from source to sink addresses with the transaction amount. The ETH datasets are also used in the SOTA work AntiBenford [2].
 
 Our datasets are available on Google Drive: https://drive.google.com/drive/folders/1TOeVzgQJAYdlGhaabtGcg8WDE9e73l3z?usp=sharing 
