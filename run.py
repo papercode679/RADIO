@@ -6,7 +6,7 @@ from datetime import datetime
 import random
 import numpy as np
 import torch
-from utils import load, feature_augmentation, split_abnormalsubgraphs, eval_scores, load_benford,load_syn
+from utils import load, feature_augmentation, split_abnormalsubgraphs, eval_scores, load_benford,load_syn,load_www24data
 import os
 import random, collections
 import math
@@ -92,7 +92,7 @@ if __name__ == "__main__":
 
     parser.add_argument("--dataset", type=str, help="dataset", default="eth-2019jan")
     # parser.add_argument("--dataset", type=str, help="dataset", default="eth-2018jan")
-    # parser.add_argument("--dataset", type=str, help="dataset", default="dblp-benford")
+    # parser.add_argument("--dataset", type=str, help="dataset", default="blur")
 
     # Train Anomalous Subgraph Refinement
     parser.add_argument("--agent_lr", type=float, help="submR learning rate", default=1e-3)
@@ -120,8 +120,8 @@ if __name__ == "__main__":
     # print(edges)
     edgelist , benford_G = load_benford()
     #load_benford use for eth-2019jan and eth-2018jan
-    # edgelist, benford_G = load_syn()
-    #load_syn use for dblp-benford dataset
+    # edgelist, benford_G = load_www24data()
+    #load_www24data use for dblp-benford dataset
 
     x = [e[2] for e in edgelist]
     x = collections.Counter(x)
