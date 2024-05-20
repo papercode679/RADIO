@@ -48,11 +48,9 @@ Each of them contains a ground-truth subgraphs file `{name}-1.90.anomaly.txt` an
 
 ### Blur
 
-The Blur dataset is a citation network dataset without transaction information itself. To simulate the anomalous transaction information, we plant anomalies with the first digit distribution into the subgraphs in the dataset. Specifically, we follow the setting in Antibenford [2] to inject anomalies into 110 randomly picked subgraphs.
+The Blur dataset is a transaction dataset from the NFT marketplace [55], which is compiled by Etherscan API[3] from Oct. 19, 2022 to Apr. 1, 2023. They contain NFT transactions among addresses.
 
-Raw DBLP datasets are available at SNAP(http://snap.stanford.edu/data/index.html).
-
-dataset/dblp-benford contains a file with abnormal subgraphs `{name}-1.90.anomaly.txt` and an edge file `{name}-1.90.ungraph.txt`.
+dataset/blur contains a file with abnormal subgraphs `{name}-1.90.anomaly.txt` and an edge file `{name}-1.90.ungraph.txt`.
 
 ## Data preprocessing
 
@@ -71,7 +69,7 @@ python run.py --dataset=eth-2019jan
 Main arguments:
 
 ```
---dataset [eth-2019jan,eth-2018jan,dblp-benford]: the dataset to run
+--dataset [eth-2019jan,eth-2018jan,blur]: the dataset to run
 --n_layers: number of GNN layers
 --pred_size: total number of predicted anomaly subgraphs
 --agent_lr: the learning rate of Anomalous Subgraph Refinement
@@ -84,3 +82,5 @@ Main arguments:
 [1]https://www.kaggle.com/bigquery/ethereum-blockchain
 
 [2]T. Chen and C. Tsourakakis, “Antibenford subgraphs: Unsupervised anomaly detection in financial networks,” (KDD2022)
+
+[3]https://etherscan.io/
