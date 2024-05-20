@@ -35,6 +35,7 @@ NVIDIA GeForce RTX 4090 24G GPU
 Intel Xeon Platinum 8370C processor 32-core 2.8G CPU
 
 ## Datasets info
+### Ethereum Blockchain
 
 The ETH datasets are data from the Ethereum blockchain shared by Google BigQuery[1]. They contain token transactions from source to sink addresses with the transaction amount. The ETH datasets are also used in the SOTA work AntiBenford [2].
 
@@ -45,17 +46,15 @@ Our datasets are available on Google Drive: https://drive.google.com/drive/folde
 
 Each of them contains a ground-truth subgraphs file `{name}-1.90.anomaly.txt` and an edge file `{name}-1.90.ungraph.txt`.
 
-### DBLP
+### Blur
 
-The DBLP dataset is a citation network dataset without transaction information itself. To simulate the anomalous transaction information, we plant anomalies with the first digit distribution into the subgraphs in the dataset. Specifically, we follow the setting in Antibenford [2] to inject anomalies into 110 randomly picked subgraphs.
+The Blur dataset is a citation network dataset without transaction information itself. To simulate the anomalous transaction information, we plant anomalies with the first digit distribution into the subgraphs in the dataset. Specifically, we follow the setting in Antibenford [2] to inject anomalies into 110 randomly picked subgraphs.
 
 Raw DBLP datasets are available at SNAP(http://snap.stanford.edu/data/index.html).
 
 dataset/dblp-benford contains a file with abnormal subgraphs `{name}-1.90.anomaly.txt` and an edge file `{name}-1.90.ungraph.txt`.
 
 ## Data preprocessing
-
-### Ethereum Blockchain
 
 Consistent with AntiBenford [2], transactions valued at less than 1 unit are excluded during preprocessing. The primary step involves constructing the graph. To represent multiple transactions between two nodes, we combine them into a single edge. Each edge is associated with the transaction frequency and the financial distribution, i.e., the probabilities of transaction amounts starting with a certain digit. This resulting input graph is used for our analysis.
 
